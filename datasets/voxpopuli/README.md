@@ -1,8 +1,6 @@
 ---
 annotations_creators:
 - other
-extended:
-- original
 language_creators:
 - other
 languages:
@@ -34,7 +32,8 @@ licenses:
 multilinguality:
 - multilingual
 size_categories:
-- [More Information Needed]
+- 10K<n<100K
+- 100K<n<1M
 source_datasets:
 - original
 task_categories:
