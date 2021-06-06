@@ -102,11 +102,19 @@ The unlabelled audio is in 23 languages: Bulgarian (Bg), Czech (Cs), Croatian (H
 
 ### Data Fields
 
-[More Information Needed]
+- id: unique id of the data sample.
+
+- file: A path to the downloaded audio file in .ogg format.
+
+- language: the language of the data sample.
+
+- year: the year for the data sample.
+
+- segments: start and end values for speech segments within the data file.
 
 ### Data Splits
 
-The unlabelled 10K config contains 10K hours of unlabelled data (train-split only) for all 23 languages from years 2019-2020.
+There is a config for each individual of the 23 languages which will download all unlabelled data for each language from the years 2009-2020.  Additionally, the unlabelled 10K config contains 10K hours of unlabelled data (train-split only) for all 23 languages from only the years 2019-2020.
 
 ## Dataset Creation
 
