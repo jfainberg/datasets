@@ -84,7 +84,7 @@ task_ids:
 
 ### Dataset Summary
 
-A large-scale multilingual speech corpus for representation learning, semi-supervised learning and interpretation. The raw data is collected from 2009-2020 European Parliament event recordings.
+A large-scale multilingual speech corpus for representation learning, semi-supervised learning and interpretation. The raw data is collected from 2009-2020 European Parliament plenary session recordings. In each session, members of the European Parliament give speeches in turn in different European Union languages. The speeches are interpreted into each language. The (unlabelled) dataset contains both the original source speech and the respective interpreted speech.
 
 ### Supported Tasks and Leaderboards
 
@@ -102,15 +102,15 @@ The unlabelled audio is in 23 languages: Bulgarian (Bg), Czech (Cs), Croatian (H
 
 ### Data Fields
 
-- id: unique id of the data sample.
+- id (`string`): unique id of the data sample.
 
-- file: A path to the downloaded audio file in .ogg format.
+- file (`string`): A path to the downloaded audio file in .ogg format.
 
-- language: the language of the data sample.
+- language (`string`): the language of the data sample.
 
-- year: the year for the data sample.
+- year (`int`): the year for the data sample.
 
-- segments: start and end values for speech segments within the data file.
+- segments (seq. of pairs of `floats`): start and end values (in seconds) for speech segments within the data file.
 
 ### Data Splits
 
@@ -126,7 +126,7 @@ There is a config for each individual of the 23 languages which will download al
 
 #### Initial Data Collection and Normalization
 
-[More Information Needed]
+The (unlabelled) data includes all source (original speech) and target (interpreted speech) for all 23 EU languages (excluding Irish because of very limited data availability). The provided segments are created by segmenting each full-session audio into short clips of 15-30 seconds using an energy-based voice activity detection (VAD) algorithm. Each audio clip has a maximum of 2 seconds of continuous silence, and silent clips were discarded. Around 13% data were dropped after silence removal, leading to a final overall duration of around 100K hours across all 23 languages.
 
 #### Who are the source language producers?
 
