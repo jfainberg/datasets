@@ -122,7 +122,8 @@ class VoxPopuli(datasets.GeneratorBasedBuilder):
     BUILDER_CONFIGS.append(
         VoxPopuliConfig(
             name="10K",
-            description="10K hours of unlabelled audio across 23 languages from the years 2019-202.",
+            description="10K hours of unlabelled audio across 23 languages from
+            the years 2019-2020.",
             languages=_LANGUAGES,
             years=[2019, 2020],
         )
